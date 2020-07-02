@@ -20,7 +20,7 @@ interface PersonnalityDao {
     fun loadAllByCountry(countryName:String): List<Personnality>
 
     @Insert
-    fun Insert(vararg che: Personnality)
+    fun Insert(che: Personnality)
 
     @Delete
     fun delete(che: Personnality)

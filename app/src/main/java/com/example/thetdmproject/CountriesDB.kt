@@ -10,7 +10,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import java.util.concurrent.Executors
 
 @Database(entities = [Country::class,CountryHistoryEvent::class,CountryImg::class,CountryVideo::class,
-    Personnality::class,RessourceCategory::class,Ressource::class], version = 1, exportSchema = false)
+    Personnality::class,RessourceCategory::class,Resource::class], version = 1, exportSchema = false)
 abstract class CountriesDB : RoomDatabase() {
     abstract fun countryDao() :CountryDao
     abstract fun countryHistoryEventDao() :CountryHistoryEventDao
@@ -54,7 +54,7 @@ abstract class CountriesDB : RoomDatabase() {
                                     getInstance(context)!!.countryVideoDao().Insert(it)
                                 }
                                 initalCountryImgs()!!.forEach {
-                                    getInstance(context)!!.countryImgDao().Insert(it)
+                                    getInstance(context)!!.countryImgDao().insert(it)
                                 }
 
                                 initalHistoryEvents()!!.forEach {
@@ -62,7 +62,7 @@ abstract class CountriesDB : RoomDatabase() {
                                 }
 
                                 initalRessources()!!.forEach {
-                                    getInstance(context)!!.ressourceDao().Insert(it)
+                                    getInstance(context)!!.ressourceDao().insert(it)
                                 }
                             })
                     }

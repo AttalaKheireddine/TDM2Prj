@@ -1,6 +1,6 @@
 package com.example.thetdmproject
 
-import android.content.res.Resources
+
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -9,27 +9,27 @@ import androidx.room.Query
 @Dao
 interface RessourceDao
 {
-    @Query("SELECT * FROM ressource")
-    fun getAll(): List<Ressource>
+    @Query("SELECT * FROM resource")
+    fun getAll(): List<Resource>
 
-    @Query("SELECT * FROM ressource WHERE id = (:id)")
-    fun loadById(id:Int): List<Ressource>
+    @Query("SELECT * FROM resource WHERE id = (:id)")
+    fun loadById(id:Int): List<Resource>
 
-    @Query("SELECT * FROM ressource e " +
+    @Query("SELECT * FROM resource e " +
             "JOIN country c " +
             "ON c.name =e.country_name " +
             "WHERE name = (:countryName)")
-    fun loadAllByCountry(countryName:String): List<Ressource>
+    fun loadAllByCountry(countryName:String): List<Resource>
 
-    @Query("SELECT * FROM ressource e " +
+    @Query("SELECT * FROM resource e " +
             "JOIN ressourcecategory c " +
-            "ON c.name =e.ressource_name " +
-            "WHERE name = (:categoryName)")
-    fun loadAllByRessourceCategory(categoryName:String): List<Ressource>
+            "ON c.resname =e.ressource_name " +
+            "WHERE resname = (:categoryName)")
+    fun loadAllByRessourceCategory(categoryName:String): List<Resource>
 
     @Insert
-    fun Insert(che: Ressource)
+    fun insert(che: Resource)
 
     @Delete
-    fun delete(che: Ressource)
+    fun delete(che: Resource)
 }

@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class RessourceCategory(
-    @PrimaryKey(autoGenerate = false) val name: String,
+    @PrimaryKey(autoGenerate = false) val resname: String,
     @ColumnInfo(name="unit") val unit :String
 )

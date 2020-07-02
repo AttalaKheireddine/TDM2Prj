@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerview(country_list: List<Country>) {
-
-
         val orientation = resources.configuration.orientation
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) { // In landscape
             val middle = country_list.size/2

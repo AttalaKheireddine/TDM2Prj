@@ -28,12 +28,9 @@ class CountryRecyclerAdapter (private val context: Context?, private var list: M
         holder.itemView.countryImgbutton.setOnClickListener {
             val intent = Intent(context, CountryDetailActivity::class.java)
             intent.putExtra("pays",current.name)
-
             context?.startActivity(intent)
 
         }
-
-
     }
 
     override fun getItemCount(): Int = list.size
@@ -46,7 +43,7 @@ class CountryRecyclerAdapter (private val context: Context?, private var list: M
         lateinit var current: Country
 
         fun setData(current:Country, position: Int) {
-            itemView.country_name.text = current.name
+            itemView.country_name_text.text = current.name
             if (context != null) {
                 itemView.countryImgbutton.setImageURI(DBFileURI(current.flag,context.packageName))
             }

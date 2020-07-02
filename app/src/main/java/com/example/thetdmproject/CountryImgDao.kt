@@ -20,7 +20,7 @@ interface CountryImgDao {
     fun loadAllByCountry(countryName:String): List<CountryImg>
 
     @Insert
-    fun Insert(che: CountryImg)
+    fun insert(che: CountryImg)
 
     @Delete
     fun delete(che: CountryImg)

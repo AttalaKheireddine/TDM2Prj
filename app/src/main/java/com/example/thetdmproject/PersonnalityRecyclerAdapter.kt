@@ -41,7 +41,7 @@ class PersonnalityRecyclerAdapter (private val context: Context?, private var li
             if (context != null) {
                 itemView.personPic.setImageURI(DBFileURI(current.photo,context.packageName))
             }
-            itemView.personName.text =current.fullName
+            itemView.personName.text ="${current.fullName} (${current.Bdate}-${current.Ddate})"
             itemView.descriptionText.text = current.description
             this.pos = position
             this.current = current

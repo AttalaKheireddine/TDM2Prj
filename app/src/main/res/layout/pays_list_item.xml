@@ -14,8 +14,8 @@
         android:background="#00FFFFFF">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="323dp"
-            android:layout_height="184dp"
+            android:layout_width="296dp"
+            android:layout_height="173dp"
             android:background="#2A77B5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,9 +35,9 @@
                 app:srcCompat="@drawable/algeria_flag" />
 
             <TextView
-                android:id="@+id/country_name"
-                android:layout_width="120dp"
-                android:layout_height="30dp"
+                android:id="@+id/country_name_text"
+                android:layout_width="96dp"
+                android:layout_height="43dp"
                 android:layout_marginTop="68dp"
                 android:background="#00000000"
                 android:ellipsize="end"
@@ -52,17 +52,6 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/countryImgbutton"
                 app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/exploreButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:backgroundTint="#03A9F4"
-                android:text="Explore!"
-                app:layout_constraintEnd_toEndOf="@+id/country_name"
-                app:layout_constraintStart_toEndOf="@+id/countryImgbutton"
-                app:layout_constraintTop_toBottomOf="@+id/country_name" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

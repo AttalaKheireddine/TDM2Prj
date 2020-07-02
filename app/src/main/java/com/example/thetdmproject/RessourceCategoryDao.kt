@@ -11,7 +11,7 @@ interface RessourceCategoryDao
     @Query("SELECT * FROM ressourcecategory")
     fun getAll(): List<RessourceCategory>
 
-    @Query("SELECT * FROM ressourcecategory WHERE name = (:nameValue)")
+    @Query("SELECT * FROM ressourcecategory WHERE resname = (:nameValue)")
     fun loadByName(nameValue:String): List<RessourceCategory>
 
     @Insert

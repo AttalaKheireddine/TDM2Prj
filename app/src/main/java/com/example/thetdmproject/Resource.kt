@@ -11,11 +11,11 @@ import androidx.room.PrimaryKey
         childColumns = arrayOf("country_name"),
         onDelete = ForeignKey.CASCADE),
         ForeignKey(entity = RessourceCategory::class,
-            parentColumns = arrayOf("name"),
+            parentColumns = arrayOf("resname"),
             childColumns = arrayOf("ressource_name"),
             onDelete = ForeignKey.CASCADE)
 ))
-data class Ressource(
+data class Resource(
 
     @PrimaryKey(autoGenerate = true) val id: Int,
     @ColumnInfo(name = "country_name") val countryName: String,

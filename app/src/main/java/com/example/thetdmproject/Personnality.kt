@@ -14,8 +14,8 @@ import java.util.*
 data class Personnality(
     @PrimaryKey(autoGenerate = true) val id: Int,
     @ColumnInfo(name = "country_name") val countryName: String,
-    @ColumnInfo(name = "birth_date") val Bdate : Date,
-    @ColumnInfo(name = "death_date") val Ddate : Date?,
+    @ColumnInfo(name = "birth_date") val Bdate : String,
+    @ColumnInfo(name = "death_date") val Ddate : String,
     @ColumnInfo(name = "full_name") val fullName: String,
     @ColumnInfo(name = "description") val description: String,
     @ColumnInfo(name = "photo") val photo : String
